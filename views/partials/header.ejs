@@ -1,0 +1,11 @@
+<div id="header-spot"></div>
+
+<header id="header">
+    <div class="left-block"> <h3>Checkpoint</h3> </div>
+    <div class="left-block"> <button>Home page</button> </div>
+    <div class="right-block"> 
+        <% if(loggedIn === false) {%> <button>Log in</button>
+        <% } else {%> <button><%= username %></button> <%}%>
+    </div>
+    <div class="right-block"> <button>Post an ad</button> </div>
+</header>
