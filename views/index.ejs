@@ -20,11 +20,11 @@
         <div id="category-bar">
             <p id="category-title">filter</p>
             <% categories.forEach(category => { %>
-                <div class="category-item">
+                <button class="category-item" name=<%= category.name %>>
                     <% if(category.show === false) {%> <img class="category-img" src="images/plus.png">
                     <% } else {%> <img class="category-img" src="images/minus.png"> <%}%>
-                    <button class = "category-heading"><%= category.name %></button>
-                </div>
+                    <p class = "category-heading"><%= category.name %></p>
+                </button>
                 <% if(category.show === true) { category.items.forEach(item => {%>
                         <div class="category-item category-subject">
                             <img class="category-img" src="images/emptySelect.png">
