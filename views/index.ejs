@@ -20,17 +20,19 @@
         <div id="category-bar">
             <p id="category-title">filter</p>
             <% categories.forEach(category => { %>
-                <button class="category-item" name=<%= category.name %>>
-                    <% if(category.show === false) {%> <img class="category-img" src="images/plus.png">
-                    <% } else {%> <img class="category-img" src="images/minus.png"> <%}%>
-                    <p class = "category-heading"><%= category.name %></p>
-                </button>
-                <% if(category.show === true) { category.items.forEach(item => {%>
-                        <div class="category-item category-subject">
-                            <img class="category-img" src="images/emptySelect.png">
-                            <button><%= item %></button>
-                        </div>
-                <% }); } %>
+                <div id= <%= category.name %>>
+                    <button class="category-item category-button" name=<%= category.name %>>
+                        <img class="category-img plus-img" src="images/plus.png">
+                        <img class="category-img minus-img" src="images/minus.png" style="display: none;">
+                        <p class = "category-text"><%= category.name %></p>
+                    </button>
+                    <% category.items.forEach(item => {%>
+                            <button class="category-item category-subject" style="display: none;">
+                                <img class="category-img" src="images/emptySelect.png">
+                                <p class = "category-text"><%= item %></p>
+                            </button>
+                    <% }); %>
+                </div>
             <% }); %>
             <div class="category-item"></div>
         </div>
