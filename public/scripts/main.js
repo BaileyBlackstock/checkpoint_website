@@ -1,4 +1,5 @@
 const buttons = document.querySelectorAll(".category-button");
+const searchBar = document.querySelector('#search-bar');
 const categoryBar = document.querySelector("#category-bar"); 
 
 const categories = {"type":false,"price":false,"distance":false};
@@ -9,7 +10,6 @@ function updateCategoryDisplay(){
 
         // change expand image display option
         const buttonChildren = div.children[0].children;
-        console.log(buttonChildren);
         if(categories[category]){ buttonChildren[0].style.display = "none"; buttonChildren[1].style.display = "inline-block"; }
         else {buttonChildren[1].style.display = "none"; buttonChildren[0].style.display = "inline-block";}
 
@@ -28,3 +28,7 @@ buttons.forEach(b => {
         updateCategoryDisplay();
     });
 });
+
+searchBar.addEventListener('submit', async (e) =>{
+    e.preventDefault();
+})
