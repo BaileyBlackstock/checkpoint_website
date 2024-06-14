@@ -11,15 +11,13 @@ const data = { loggedIn: false,
     {name:"toyota",suburb:"palm beach"},
     {name:"yatch",suburb:"currumbin"},
     {name:"dirt",suburb:"nerang"}],
-    categories: [{name:"type", items:["All", "cards", "board games", "video games", "memorabilia"]},
-    {name:"price", items:["All", "<$20", "<$50", "<$200", "<$100", "<$250", "<$1000"]},
-    {name:"distance", items:["All", "<1km", "<3km", "<5km","<10km","<25km","<50km","<100km"]}],
+    categories: [{name:"type", items:[["all","all"], ["cards","cards"], ["board","board games"], ["video","video games"], ["memorabilia","memorabilia"]]},
+    {name:"price", items:[["all","all"], ["20","<$20"], ["50","<$50"], ["200","<$200"], ["100","<$100"], ["250","<$250"], ["1000","<$1000"]]},
+    {name:"distance", items:[["all","all"], ["1","<1km"], ["3","<3km"], ["5","<5km"],["10","<10km"],["25","<25km"],["50","<50km"],["100","<100km"]]}],
     show: true,
 };
 
 router.get('/', (req, res) => {
-    data.show = (req.query.show === 'true');
-    console.log(data.show);
     res.render('index', data);
 });
 

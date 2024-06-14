@@ -27,10 +27,11 @@
                         <p class = "category-text"><%= category.name %></p>
                     </button>
                     <% category.items.forEach(item => {%>
-                            <button class="category-item category-subject" style="display: none;">
-                                <img class="category-img" src="images/emptySelect.png">
-                                <p class = "category-text"><%= item %></p>
-                            </button>
+                        <button class="category-item category-subject" style="display: none;" name=<%= item[0] %>>
+                            <img class="category-img unselected-img" src="images/emptySelect.png">
+                            <img class="category-img selected-img" src="images/fullSelect.png" style="display: none;">
+                            <p class = "category-text"><%= item[1] %></p>
+                        </button>
                     <% }); %>
                 </div>
             <% }); %>
