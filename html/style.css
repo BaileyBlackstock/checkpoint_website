@@ -53,12 +53,25 @@ button{
     width: 120px;
 }
 
+#footer{
+    padding-bottom: 10px;
+}
+
 .footer-block{
     float: left;
     width: 50%;
     font-size: 10px;
     margin-top: 20px;
     text-align: center;
+}
+
+.footer-block a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-block a:hover{
+    color: #bbb;
 }
 
 #start-card{
