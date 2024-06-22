@@ -39,6 +39,11 @@ button{
     color: #aaa;
 }
 
+#header a, #header a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
 .nav-block{
     display: inline-flex;
 }
